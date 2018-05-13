@@ -1,0 +1,75 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#form-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    height: 106px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 14px;
+}
+
+#main-header {
+    font-size: 40px;
+    line-height: normal;
+    text-align: center;
+}
+
+#shortener-form {
+    margin-top: 20px;
+}
+
+.input-container {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.input-container.large {
+    width: 80%;
+}
+
+.input-container.small {
+    width: 20%;
+    padding-left: 10px;
+}
+
+#url-input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: 1px solid #CCC;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+}
+
+#url-input.invalid {
+    border: 1px solid red;
+}
+
+#submit {
+    display: block;
+    width: 100%;
+    height: 36px;
+    background-color: #039be5;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+    cursor: pointer;
+}
