@@ -3,10 +3,12 @@
 
     var form;
     var urlInput;
+    var errorMessage;
 
     document.addEventListener("DOMContentLoaded", function() {
         form = document.getElementById("shortener-form");
         urlInput = document.getElementById("url-input");
+        errorMessage = document.getElementById("error-message");
 
         form.addEventListener("submit", startSubmit);
         urlInput.addEventListener("input", removeError);
@@ -14,16 +16,26 @@
 
     function removeError() {
         this.classList.remove("invalid");
+        hideError();
+    }
+
+    function hideError() {
+        errorMessage.classList.remove("show");
+        errorMessage.textContent = "";
     }
 
     function startSubmit(event) {
         event.preventDefault();
+        hideError();
         
         if(validateForm()) {
             getShortenedUrl().then(function(data) {
-
+                var shortened_url = window.location.origin + "/" + data.message.shortened_url;
+                urlInput.value = shortened_url;
+                urlInput.select();
             }).catch(function(error) {
-
+                errorMessage.textContent = error.message;
+                errorMessage.classList.add("show");
             });
         }
     }

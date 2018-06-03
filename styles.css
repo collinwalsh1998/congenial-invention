@@ -74,6 +74,20 @@ html, body {
     cursor: pointer;
 }
 
+#error-message {
+    font-size: 14px;
+    line-height: 16px;
+    color: red;
+    margin-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+    display: none;
+}
+
+#error-message.show {
+    display: block;
+}
+
 @media screen and (max-width: 600px) {
     .input-container.large {
         width: 70%;
@@ -97,5 +111,10 @@ html, body {
     .input-container.small {
         padding-left: 0;
         margin-top: 10px;
+    }
+
+    #error-message {
+        padding-left: 0;
+        text-align: center;
     }
 }
