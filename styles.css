@@ -73,3 +73,29 @@ html, body {
     text-align: center;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .input-container.large {
+        width: 70%;
+    }
+
+    .input-container.small {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #main-header {
+        font-size: 30px;
+    }
+
+    .input-container.large, .input-container.small {
+        display: block;
+        width: 100%;
+    }
+
+    .input-container.small {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+}

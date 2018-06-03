@@ -59,7 +59,7 @@
             }
 
             request.onerror = function() {
-                return reject({ success: false, message: "An error occurred generating URL" });
+                return reject({ success: false, message: "An error occurred generating the shortened URL" });
             }
         });
     }
