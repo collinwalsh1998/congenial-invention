@@ -30,7 +30,7 @@
         
         if(validateForm()) {
             getShortenedUrl().then(function(data) {
-                var shortened_url = window.location.origin + "/" + data.message.shortened_url;
+                var shortened_url = window.env.apiUrl + "/" + data.message.shortened_url;
                 urlInput.value = shortened_url;
                 urlInput.select();
             }).catch(function(error) {
